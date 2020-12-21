@@ -1,0 +1,133 @@
+﻿<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Лабораторная работа №4</title>
+</head>
+
+<body>
+    <header>
+        <h1>Лабораторная работа №4</h1>
+    </header>
+
+    <div class="container">
+        <h2>Задание №3</h2>
+
+        <details>
+            <summary> Объект "window"</summary>
+            <div id="window"></div>
+        </details>
+        <details>
+            <summary>Объект "document"</summary>
+            <div id="document"></div>
+        </details>
+        <details>
+            <summary>Объект "location"</summary>
+            <div id="location"></div>
+        </details>
+        <details>
+            <summary>Объект "navigator"</summary>
+            <div id="navig"></div>
+        </details>
+
+        <!--WINDOW-->
+        <script>
+            var w = "";
+            for (var property in window) {
+                w += "<strong>" + property + ": </strong>" + window[property];
+                w += "<br />";
+            }
+            document.getElementById("window").innerHTML = w;
+        </script>
+
+        <!--DOCUMENT-->
+        <script>
+            var d = "";
+            for (var property in document) {
+                d += "<strong>" + property + "</strong>" + document[property];
+                d += "<br />";
+            }
+            document.getElementById("document").innerHTML = d;
+        </script>
+
+        <!--LOCATION-->
+        <script>
+            var l = "";
+            for (var property in location) {
+                l += "<strong>" + property + "</strong>" + location[property];
+                l += "<br />";
+            }
+            document.getElementById("location").innerHTML = l;
+        </script>
+
+        <!--navigator-->
+        <script>
+            var n = "";
+            for (var property in navigator) {
+                n += "<strong>" + property + "</strong>: " + navigator[property];
+                n += "<br />";
+            }
+            document.getElementById("navig").innerHTML = n;
+        </script>
+    </div>
+
+    <div class="container">
+        <h2> Задание №4 </h2>
+
+        <script src="script2.js"></script>
+        <button onclick="createArray()" class="b1">Создать матрицу</button>
+        <button onclick="sortArray()" class="b1">Сортировать матрицу</button>
+        <button onclick="printArray()" class="b1">Вывести матрицу</button><br />
+    </div>
+
+    <div class="container">
+        <h2>Задание №5 </h2>
+
+        <input id="num1" name="num1" size="2">
+        <label for="num1">X1</label>
+        <input id="num2" name="num2" size="2">
+        <label for="num2">X2</label>
+        <input id="num3" name="num3" size="2">
+        <label for="num3">X3</label>
+        <label for="=">=</label>
+        <input id="num=1" name="=" size="2">
+        <br>
+        <input id="num4" name="num4" size="2">
+        <label for="num4">X1</label>
+        <input id="num5" name="num5" size="2">
+        <label for="num5">X2</label>
+        <input id="num6" name="num6" size="2">
+        <label for="num6">X3</label>
+        <label for="=">=</label>
+        <input id="num=2" name="=" size="2">
+        <br>
+        <input id="num7" name="num7" size="2">
+        <label for="num7">X1</label>
+        <input id="num8" name="num8" size="2">
+        <label for="num8">X2</label>
+        <input id="num9" name="num9" size="2">
+        <label for="num9">X3</label>
+        <label for="=">=</label>
+        <input id="num=3" name="=" size="2">
+        <br /><br />
+
+        <script src="script.js"></script>
+        <button onclick="generate()" class="b2">Сгенерировать коэффициенты:</button>
+        <br><br>
+        <label for="x1">X1 = </label>
+        <input id="x1" name="x1" size="5">
+        <br>
+        <label for="x2">X2 = </label>
+        <input id="x2" name="x2" size="5">
+        <br>
+        <label for="x3">X3 = </label>
+        <input id="x3" name="x3" size="5">
+        <br><br />
+        <button onclick="decision()" class="b2">Решение системы</button>
+    </div>
+
+</body>
+
+</html>
